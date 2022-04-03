@@ -1,0 +1,48 @@
+body {
+  background: url('./img/bg.png') repeat;
+}
+
+.polaroid-gallery{
+  text-align: center;
+}
+
+.polaroid-card{
+  display: inline-block;
+  background-color: #eee6d8;
+  padding: 10px;
+}
+
+
+.polaroid-card-caption{
+  text-align: center;
+  font-family: "Marker Felt", serif;
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+.polaroid-card:nth-of-type(even){
+  transform: rotate(25deg)
+}
+
+.polaroid-card:nth-of-type(even):before{
+  content: '';
+  display: block;
+  background-color: green;
+  width: 100px;
+  height: 25px;
+  transform: translate(-30px, -25px) rotate(-25deg);
+}
+
+.polaroid-card:nth-of-type(odd){
+  transform: rotate(-25deg)
+}
+
+.polaroid-card:nth-of-type(odd)::before{
+  content: '';
+  display: block;
+  background-color: red;
+  width: 100px;
+  height: 25px;
+  transform: rotate(25deg) translate(140px, -70px);
+}
